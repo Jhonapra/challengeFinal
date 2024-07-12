@@ -1,5 +1,6 @@
 package com.example.AluraForoHub.modelos;
 
+import com.example.AluraForoHub.dto.ActualizacionTopico;
 import com.example.AluraForoHub.dto.InformacionRegistrosTopicosDTO;
 import jakarta.persistence.*;
 
@@ -17,6 +18,26 @@ public class Topico {
     private String curso;
     private String titulo;
     private LocalDate fecha;
+
+
+    //Funcion para actualizar datos del topico
+    public void actualizarDatos(ActualizacionTopico actualizacionTopico) {
+        if(actualizacionTopico.usuario()!=null){
+            this.usuario =actualizacionTopico.usuario();
+        }
+        if(actualizacionTopico.mensaje()!=null){
+            this.mensaje = actualizacionTopico.mensaje();
+        }
+        if(actualizacionTopico.curso()!=null){
+            this.curso = actualizacionTopico.curso();
+        }
+        if(actualizacionTopico.titulo()!=null){
+            this.titulo = actualizacionTopico.titulo();
+        }
+        //Aqui se asigna la fecha en la que se hizo la actualizacion
+        LocalDate fechaActual = LocalDate.now();
+        this.fecha = fechaActual;
+    }
 
     //Constructor sin parametros
     public Topico() {
@@ -80,4 +101,6 @@ public class Topico {
     public int hashCode() {
         return Objects.hashCode(id);
     }
+
+
 }
