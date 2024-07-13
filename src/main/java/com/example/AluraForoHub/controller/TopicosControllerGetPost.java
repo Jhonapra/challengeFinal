@@ -1,6 +1,7 @@
 package com.example.AluraForoHub.controller;
 
 import com.example.AluraForoHub.dto.InformacionRegistrosTopicosDTO;
+import com.example.AluraForoHub.dto.ObtenerTopicosDTO;
 import com.example.AluraForoHub.dto.ObtenerTopicosPublicoDTO;
 import com.example.AluraForoHub.modelos.Topico;
 import com.example.AluraForoHub.repository.TopicoRepository;
@@ -11,7 +12,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URI;
 import java.time.LocalDate;
 
 @RestController
@@ -21,9 +24,14 @@ public class TopicosControllerGetPost {
     private TopicoRepository topicoRepository2;
 
     @PostMapping
-    private void registrarTopicos(@RequestBody @Valid InformacionRegistrosTopicosDTO datosTopico){
+    private ResponseEntity<ObtenerTopicosPublicoDTO> registrarTopicos(@RequestBody @Valid InformacionRegistrosTopicosDTO datosTopico,
+                                            UriComponentsBuilder uriComponent){
         LocalDate fechaActual = LocalDate.now();
-        topicoRepository2.save(new Topico(datosTopico, fechaActual));
+        Topico topico = topicoRepository2.save(new Topico(datosTopico, fechaActual));
+        ObtenerTopicosPublicoDTO obtenerTopicosPublico = new ObtenerTopicosPublicoDTO(topico);
+        URI url = uriComponent.path("topicos/{id}").buildAndExpand(topico.getId()).toUri();
+        return ResponseEntity.created(url).body(obtenerTopicosPublico);
+
     }
 
     @GetMapping
