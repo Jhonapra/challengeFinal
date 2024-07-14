@@ -9,7 +9,7 @@
 - Pd: La clave debe estar encriptada, si quieres puedes usar este link para crearla, (https://www.browserling.com/tools/bcrypt)
   
 -Formato para añadir la informacion en MySql:
-- ![tableUsuariosMySql](https://github.com/user-attachments/assets/574c2683-08ba-4f02-8735-c19e5267c40f)
+  ![tableUsuariosMySql](https://github.com/user-attachments/assets/574c2683-08ba-4f02-8735-c19e5267c40f)
   
 - `Formato login`:
   
@@ -20,7 +20,8 @@
   
   ![getPostman](https://github.com/user-attachments/assets/aefe14ea-f65e-44d4-a432-b765ffc45a2f)
 
-  -`Formato GET id especifica` -En GET tambien puedes obtener topicos independientes por id(/topicos/tu id):
+-`Formato GET id especifica` -En GET tambien puedes obtener topicos independientes por id(/topicos/tu id):
+
   ![GetIdPostman](https://github.com/user-attachments/assets/41698bd7-2ecd-4afb-9e1b-504ebc3b49dc)
 
   
