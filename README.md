@@ -14,8 +14,13 @@
   ![LoginPostaman](https://github.com/user-attachments/assets/e87f839f-897d-42c2-b975-25d595d96af5)
 
 - `Formato GET`:
+  Recuerda colocar la direccion de tu servidor local mas /topicos en la url.
   
   ![getPostman](https://github.com/user-attachments/assets/aefe14ea-f65e-44d4-a432-b765ffc45a2f)
+
+  En GET tambien puedes obtener topicos independientes por id(/topicos/tu id):
+  ![GetIdPostman](https://github.com/user-attachments/assets/41698bd7-2ecd-4afb-9e1b-504ebc3b49dc)
+
   
 - `Formato POST`:
   
@@ -26,6 +31,7 @@
   ![putPostman](https://github.com/user-attachments/assets/da378440-e06f-4520-b76c-6946ade12ddc)
 
 - `Formato DEL`:
+  Debes colocar el id del topico que deseas eliminar(/topicos/la id que deseas eliminar)
   
   ![DelPostman](https://github.com/user-attachments/assets/b6701207-079c-4b1e-a40d-8e6b00d362a4)
 
