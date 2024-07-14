@@ -11,7 +11,7 @@
   
 - `Formato login`:
   
-![LoginPostaman](https://github.com/user-attachments/assets/e87f839f-897d-42c2-b975-25d595d96af5)
+  ![LoginPostaman](https://github.com/user-attachments/assets/e87f839f-897d-42c2-b975-25d595d96af5)
 
 - `Formato GET`:
   
