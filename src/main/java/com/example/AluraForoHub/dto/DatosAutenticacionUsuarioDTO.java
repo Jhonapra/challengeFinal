@@ -1,5 +1,9 @@
 package com.example.AluraForoHub.dto;
 
-public record DatosAutenticacionUsuarioDTO(String usuario,
+import jakarta.validation.constraints.NotBlank;
+
+public record DatosAutenticacionUsuarioDTO(@NotBlank
+                                           String usuario,
+                                           @NotBlank
                                            String contraseña) {
 }
