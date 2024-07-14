@@ -1,10 +1,12 @@
 package com.example.AluraForoHub.controller;
 
+import com.example.AluraForoHub.dto.ActualizacionTopico;
 import com.example.AluraForoHub.dto.InformacionRegistrosTopicosDTO;
 import com.example.AluraForoHub.dto.ObtenerTopicosDTO;
 import com.example.AluraForoHub.dto.ObtenerTopicosPublicoDTO;
 import com.example.AluraForoHub.modelos.Topico;
 import com.example.AluraForoHub.repository.TopicoRepository;
+import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,6 +18,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 import java.time.LocalDate;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/topicos")
