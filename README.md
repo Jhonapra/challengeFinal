@@ -1,6 +1,6 @@
 <h1 align="center"> Challenge Foro Hub </h1>
 
-##¿Como usar el forohub? :scream_cat:: 
+## ¿Como usar el forohub? :scream_cat:: 
 - Para usar el forohub debes conectar MySql al proyecto, solo debes ir a la carpeta resources y en aplication.properties colocar la informacion de tu MySql para conectarlo.
 - Para hacer las pruebas puedes usar postman o insomnia para hacer las requests html al servidor local.
 - A continuacion te dejare unas imagenes como forma de guia para que sepas el formato de las requests(En mis ejemplos usare postman).
