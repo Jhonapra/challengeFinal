@@ -27,19 +27,19 @@ public class TopicosControllerGetPost {
     private TopicoRepository topicoRepository2;
 
     @PostMapping
-    private ResponseEntity<ObtenerTopicosPublicoDTO> registrarTopicos(@RequestBody @Valid InformacionRegistrosTopicosDTO datosTopico,
+    private ResponseEntity<ObtenerTopicosDTO> registrarTopicos(@RequestBody @Valid InformacionRegistrosTopicosDTO datosTopico,
                                             UriComponentsBuilder uriComponent){
         LocalDate fechaActual = LocalDate.now();
         Topico topico = topicoRepository2.save(new Topico(datosTopico, fechaActual));
-        ObtenerTopicosPublicoDTO obtenerTopicosPublico = new ObtenerTopicosPublicoDTO(topico);
+        ObtenerTopicosDTO obtenerTopicos = new ObtenerTopicosDTO(topico);
         URI url = uriComponent.path("topicos/{id}").buildAndExpand(topico.getId()).toUri();
-        return ResponseEntity.created(url).body(obtenerTopicosPublico);
+        return ResponseEntity.created(url).body(obtenerTopicos);
 
     }
 
     @GetMapping
-    private ResponseEntity<Page<ObtenerTopicosPublicoDTO>> obtenerTopicos(@PageableDefault(size = 5) Pageable paginacion){
+    private ResponseEntity<Page<ObtenerTopicosDTO>> obtenerTopicos(@PageableDefault(size = 5) Pageable paginacion){
 //      return topicoRepository.findAll(paginacion).map(ObtenerTopicosPublicoDTO::new);
-        return ResponseEntity.ok(topicoRepository2.findAll(paginacion).map(ObtenerTopicosPublicoDTO::new));
+        return ResponseEntity.ok(topicoRepository2.findAll(paginacion).map(ObtenerTopicosDTO::new));
     }
 }
