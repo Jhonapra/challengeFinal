@@ -7,7 +7,7 @@
 - Recuerda que debes hacer el login primero, para generar el token de acceso, ademas en las tablas de MySql debes poner la informacion en usuario(id, usuario, correo(Opcional por el momento) y la clave),
   ya que esta informacion no viene por defecto ni se puede crear desde postman. toca crearla directamente desde la base de datos.
 - Pd: La clave debe estar encriptada, si quieres puedes usar este link para crearla, (https://www.browserling.com/tools/bcrypt)
-  Formato para añadir la informacion en MySql:
+  -Formato para añadir la informacion en MySql:
 - ![tableUsuariosMySql](https://github.com/user-attachments/assets/574c2683-08ba-4f02-8735-c19e5267c40f)
   
 - `Formato login`:
